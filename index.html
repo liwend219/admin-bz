@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>保挣科技</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,">
+    <link rel="shortcut icon" type="image/ico" href="src/images/favicon.ico">
+    <link rel="stylesheet" href="/dist/main.css">
+</head>
+<body>
+      <script>
+      (function judge(){
+          if(navigator.appName=='Microsoft Internet Explorer')
+          {
+              //获取body
+              var b=document.getElementsByTagName('body');
+              //覆盖整个网页的大div
+              var pbody=document.createElement('div');
+              // var w=document.documentElement.clientWidth;
+              // var h=document.documentElement.clientHeight;
+              pbody.style.width='100%';
+              pbody.style.height='100%';
+              pbody.style.backgroundColor='#4F4F4F';
+              pbody.style.position='fixed';
+              pbody.style.margin='-8px';
+              pbody.style.padding='0';
+              pbody.style.zIndex='99999';
+              b[0].appendChild(pbody);
+              //提示框
+              var IEPrompt=document.createElement('div');
+              pbody.appendChild(IEPrompt);
+              //给提示框设置样式
+              IEPrompt.style.cssText="position: absolute;width: 450px;height: 250px;background: #D3D3D3;"+
+              "top:50%;left:50%;margin-top:-250px;margin-left: -225px;border: 1px solid #838B8B;";
+              //提示主体内容
+              var Prompt=document.createElement('div');
+              Prompt.style.cssText="width: 100%;height: 200px;margin-top: 50px;";
+              IEPrompt.appendChild(Prompt);
+              //提示语及超链接相关
+              Prompt.innerHTML='<span style="display: block;text-align: center;color:#f04b46;font-weight:700;">你的浏览器版本太低，请升级你的浏览器！</span>'+
+              '<a style="display: inline-block;color:#4F4F4F;background:#8DB6CD;width: 160px;height:50px;line-height:50px;margin-left:42px;text-align: center;'+
+              'border:1px solid #828282;text-decoration:none;margin-top: 50px;" '+
+              'href="http://sw.bos.baidu.com/sw-search-sp/software/14aca1f5063ab/ChromeStandalone_59.0.3071.115_Setup.exe">Google浏览器</a>'+
+              '<a style="display: inline-block;color:#4F4F4F;background:#8DB6CD;width: 160px;height:50px;line-height:50px;margin-left:42px;text-align: center;'+
+              'border:1px solid #828282;text-decoration:none;margin-top: 50px;" href="http://pdds.ucweb.com/download/newest/UCBrowser/zh-cn/101/999/www">UC浏览器</a>';
+          }
+      })()
+    </script>
+    <div id="app"></div>
+    <script type="text/javascript" src="/dist/vendors.js"></script>
+    <script type="text/javascript" src="/dist/main.js"></script>
+</body>
+</html>
